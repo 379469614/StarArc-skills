@@ -1,5 +1,5 @@
 ---
-name: 表格生成规范
+name: table-generation
 description: >-
   当需要生成、编写或修改 .xlsx（Excel）文件时使用。触发场景：用户要求"帮我做/填一张 Excel 表、配置表、数据表"、需要生成
   xlsx、需要按某个项目的导出要求组织 xlsx 表结构、或用 openpyxl 写表后验证可被正确读取。规范主体是"怎么写

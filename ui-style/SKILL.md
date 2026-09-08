@@ -1,5 +1,5 @@
 ---
-name: UI规范
+name: ui-style
 description: 在使用Godot引擎开发项目时调用该技能，在需要生成UI相关场景或节点的时候需要自动调用这个技能，保证生产的UI符合规范。
 ---
 

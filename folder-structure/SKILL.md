@@ -1,5 +1,5 @@
 ---
-name: 目录管理规范
+name: folder-structure
 description: 在使用Godot引擎开发项目时调用该技能，当新增文件的时候，调用该技能，以管理整个文件目录的规范，需要遵循当前目录分类方法
 ---
 

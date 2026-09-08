@@ -1,5 +1,5 @@
 ---
-name: GDScript编程规范
+name: gdscript-style
 description: 在使用Godot引擎开发项目时调用该技能，为Godot项目强制执行统一的 GDScript 编程规范，当创建、修改、审查或重构任何.gd文件时严格遵循，以确保代码风格一致性与可维护性
 ---
 
