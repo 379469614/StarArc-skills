@@ -15,9 +15,10 @@ description: 不可以主动调用这个技能，仅当用户说明处理网页�
 
 ## 压缩处理
 ### Brotli压缩
-- 使用Brotli指令`index.js`,`index.pck`,`index.wasm`文件
+- 使用Brotli压缩`index.js`,`index.pck`,`index.wasm`文件
 - 压缩指令`-q 11 -k`，压缩等级11级，压缩后先不删除源文件
 - 原先已有对应的`.br`文件的则不再执行该压缩
+- 压缩时间限制为3分钟，超时则终止并报告情况
 ### br文件检查
 - 压缩完成之后执行一次 Brotli 解压测试
   - 确认`.br`未损坏
