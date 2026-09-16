@@ -7,7 +7,7 @@
   - 只有经过用户同意才能新增大模块分区
 - 每个独立界面CanvasLayer默认使用独立Layer，新增时在所属模块区间内递增
 - 存在特殊覆盖关系时可单独调整Layer，并以本文档作为项目Layer分配的唯一记录
-- 当修改Layer时，应找到对应的CavasLayer场景修改CanvasLayer根节点的Layer，不可单独修改挂载到其他场景下的CanvasLayer节点的Layer
+- 当修改Layer时，应找到对应的CanvasLayer场景修改CanvasLayer根节点的Layer，不可单独修改挂载到其他场景下的CanvasLayer节点的Layer
 - 表格中的界面仅作为示例，实际内容根据当前项目维护
 
 | CanvasLayer | 模块 | 包含界面与节点组件 |
