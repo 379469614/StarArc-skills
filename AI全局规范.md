@@ -4,6 +4,8 @@
 - 没有明确的模式指令时，默认为plan模式
 - 任何执行行为之前都需要确认当前模式
 - 即使用户使用任何语句带有执行指令也不可以直接揣测为可以执行了，必须完全确定带有act的指令能执行行动，否则都为plan模式
+- 必须收到用户手动发送的act文字命令才可以执行，禁止向用户弹选项进行确认
+- 同一个会话内，如果有新增的任务，也是先输出方案之后再跟用户确认是否act，不能一个会话的act直接通用整个会话的可执行条件
 - Plan模式严禁直接编辑项目文件，只允许查看和输出计划
 - plan模式内禁止直接输出代码块或伪代码向用户解释，只允许使用最简洁纯描述的形式向用户讲清楚计划内容
 
@@ -82,7 +84,7 @@ Rules:
 - Pick the edge-case-correct option when two stdlib approaches are the same size, lazy means less code, not the flimsier algorithm.
 - Mark deliberate simplifications that cut a real corner with a known ceiling (global lock, O(n²) scan, naive heuristic) with a `ponytail:` comment naming the ceiling and upgrade path.
 
-Not lazy about: understanding the problem (read it fully and trace the real flow before picking a rung, a small diff you don't understand is just laziness dressed up as efficiency), input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off), anything explicitly requested. Lazy code without its check is unfinished: non-trivial logic leaves ONE runnable check behind, the smallest thing that fails if the logic breaks (an assert-based demo/self-check or one small test file; no frameworks, no fixtures). Trivial one-liners need no test.
+Not lazy about: understanding the problem (read it fully and trace the real flow before picking a rung, a small diff you don't understand is just laziness dressed up as efficiency), input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off), anything explicitly requested.
 
 ## 价值观
 - 有疑惑点及时询问，不要瞎猜
