@@ -25,4 +25,30 @@ description: 使用godot引擎开发项目时调用此技能，计划制定、�
 
 纯 GDScript 代码编辑、算法修改、重构和文本资源修改，可以直接操作工程文件，不要求强制使用 MCP
 
-如果 godot-ai MCP 不可用或连接失败，应明确说明，而不是假设 Godot 当前状态
+如果 godot-ai MCP 不可用或连接失败，应明确向用户说明，而不是假设 Godot 当前状态
+
+## Godot 无头启动规则
+
+当需要为当前 Worktree 启动 Godot MCP 时：
+
+1. 使用当前项目对应的 Godot 可执行文件，并通过绝对路径 `--path` 指向当前 Worktree。
+2. 当前 Worktree 没有可复用 MCP session 时，使用 `--headless --editor --path <worktree>` 启动 Godot Editor。
+3. 不得添加 `--quit`、`--quit-after`、`--import` 等会使编辑器退出的参数。
+4. 启动成功后仍必须等待 MCP session 建立，并校验 `project_path` 与当前 Worktree 一致。
+5. 保存对应 `session_id`，后续 MCP 调用显式指定该 session。
+6. MCP 连接失败或超时时停止任务并报告，不得切换到其他 Worktree 的 session。
+7. 仅清理本任务自行启动的 Godot 进程，不得关闭用户已有编辑器或其他 Worktree 的进程。
+8. 无头模式只用于 MCP、运行检查和自动化验证，不能替代画面、输入、音频及游戏体验的人工验收。
+
+## Godot MCP 启动规则
+当任务需要使用 Godot MCP 时：
+
+1. 查询当前已连接的 Godot sessions。
+2. 根据 project_path 查找当前 Worktree 对应的 session。
+3. 如果不存在，启动当前 Worktree 的 Godot Editor。
+4. 等待对应 session 建立连接。
+5. 再次校验 project_path，禁止使用其他 Worktree 的 session。
+6. 保存对应 session_id。
+7. 后续所有支持 session_id 的 MCP 调用必须显式指定。
+8. 禁止依赖 global active session。
+9. 如果 Godot 启动或 MCP 连接失败，停止任务并报告。
