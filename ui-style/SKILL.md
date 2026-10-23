@@ -1,6 +1,6 @@
 ---
 name: ui-style
-description: 用于Godot UI创建、修改及项目UI规范维护
+description: 在制作UI相关内容的时候，调用此技能
 ---
 
 # 通用UI规范
