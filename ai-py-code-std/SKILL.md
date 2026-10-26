@@ -5,7 +5,6 @@ description: >-
   的请求时，无论任务看起来多简单，**必须**在第一次调用编辑工具（`replace_in_file` / `write_to_file` /
   `read_file`）之前，先调用 `use_skill` 加载 `ai-py-code-std`
   技能，并按该技能输出的规范约束后续所有代码生成行为。**例外**：若当前会话中已加载过该技能且上下文未中断，则无需重复加载
-disabled: true
 ---
 
 # ai-py-code-std
