@@ -1,6 +1,6 @@
 ---
 name: code-rule
-description: 当开始编码之前调用这个技能
+description: 编写或修复代码前调用，优先复用已有实现并最小化改动
 ---
 
 # Ponytail, lazy senior dev mode

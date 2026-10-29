@@ -1,10 +1,6 @@
 ---
 name: ai-py-code-std
-description: >-
-  每次收到涉及 **创建、修改、审查、重构** 任何 **.py 文件**
-  的请求时，无论任务看起来多简单，**必须**在第一次调用编辑工具（`replace_in_file` / `write_to_file` /
-  `read_file`）之前，先调用 `use_skill` 加载 `ai-py-code-std`
-  技能，并按该技能输出的规范约束后续所有代码生成行为。**例外**：若当前会话中已加载过该技能且上下文未中断，则无需重复加载
+description: 创建、修改、审查或重构 Python（.py）文件时调用
 ---
 
 # ai-py-code-std
