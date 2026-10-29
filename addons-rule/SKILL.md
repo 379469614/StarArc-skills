@@ -1,6 +1,6 @@
 ---
 name: addons-rule
-description: 使用Godot引擎开发时，当任务涉及addons文件夹、插件代码或可能影响插件内容时调用此技能
+description: 使用Godot引擎开发时，任务需要直接新增、修改、移动或删除 res://addons/ 内的文件时调用此技能
 ---
 
 # 插件不修改原则
