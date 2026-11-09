@@ -1,6 +1,6 @@
 ---
 name: awesome-gamedev-agent-skills
-description: 游戏开发技能路由，按任务选择通用与Godot技能
+description: 游戏开发技能路由。涉及游戏设计、功能开发、调试、优化等主动调用该技能。涉及游戏开发相关的从制作计划开始时就可以调用这个技能。
 ---
 
 # 游戏开发技能路由
